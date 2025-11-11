@@ -5,9 +5,18 @@ namespace: microservices-dev
 
 resources:
   - ../../base
-
-patchesStrategicMerge:
-  - poem-patch.yaml
-  - quote-patch.yaml
-  - frontend-patch.yaml
   - namespace.yaml
+
+patches:
+  - path: poem-patch.yaml
+    target:
+      kind: Deployment
+      name: poem-service
+  - path: quote-patch.yaml
+    target:
+      kind: Deployment
+      name: quote-service
+  - path: frontend-patch.yaml
+    target:
+      kind: Deployment
+      name: frontend-service
