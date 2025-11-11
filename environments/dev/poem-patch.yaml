@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poem-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poem-service
+  template:
+    metadata:
+      labels:
+        app: poem-service
+    spec:
+      containers:
+        - name: poem-service
+          image: us-central1-docker.pkg.dev/YOUR_PROJECT/microservice-registery/poem-service:dev-latest
