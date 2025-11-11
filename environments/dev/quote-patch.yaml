@@ -1,17 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: poem-service
+  name: quote-service
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: quote-service
-  template:
-    metadata:
-      labels:
-        app: quote-service
-    spec:
-      containers:
-        - name: quote-service
-          image: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/quote-service:dev-latest

@@ -7,6 +7,14 @@ resources:
   - ../../base
   - namespace.yaml
 
+images:
+  - name: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/poem-service
+    newTag: dev
+  - name: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/quote-service
+    newTag: dev
+  - name: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/frontend-service
+    newTag: dev
+
 patches:
   - path: poem-patch.yaml
     target:

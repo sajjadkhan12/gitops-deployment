@@ -4,14 +4,3 @@ metadata:
   name: poem-service
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: poem-service
-  template:
-    metadata:
-      labels:
-        app: poem-service
-    spec:
-      containers:
-        - name: poem-service
-          image: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/poem-service:dev-latest
