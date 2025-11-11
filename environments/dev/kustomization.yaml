@@ -9,11 +9,11 @@ resources:
 
 images:
   - name: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/poem-service
-    newTag: dev
+    newTag: latest
   - name: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/quote-service
-    newTag: dev
+    newTag: latest
   - name: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/frontend-service
-    newTag: dev
+    newTag: latest
 
 patches:
   - path: poem-patch.yaml
