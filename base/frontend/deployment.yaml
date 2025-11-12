@@ -19,3 +19,11 @@ spec:
           image: us-central1-docker.pkg.dev/fast-pagoda-474409-c7/microservice-registery/frontend-service:latest
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: default.conf
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-config
